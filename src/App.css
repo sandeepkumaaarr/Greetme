@@ -1,5 +1,4 @@
 .main-div{
-  /* border: 5px solid green; */
   background-color: aquamarine;
   width: 100vw;
   height: 100vh;
@@ -9,7 +8,6 @@
 }
 .text-div{
   text-align: center;
-  /* border:5px solid red; */
   background-color: antiquewhite;
   padding: 16px;
   border-radius: 4px;
@@ -17,6 +15,5 @@
   width:450px
 }
 .greet{
-  /* border: 1px solid red; */
   text-shadow: 1px 1px 5px #aaa;
 }
