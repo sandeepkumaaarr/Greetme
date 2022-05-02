@@ -1,25 +1,39 @@
-import logo from './logo.svg';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const today = new Date();
+console.log(today);
+let time = today.getHours();
+let greet;
+const greetcolor = {
+  color : 'pink'  
+
 }
 
+  if(time>12&&time<=18){
+    greetcolor.color = 'yellowgreen';
+    greet = "Good afternoon"  
+  }
+  else if(time>18&&time<=24){
+    greetcolor.color = 'black';
+    greet = "Good night";  
+  }
+  else if(time>24&&time<=12){
+    greetcolor.color = 'blue';
+    greet = "Good morning";  
+  }
+
+console.log(greetcolor);
+console.log(time);
+function App() {
+  return (
+    <>
+   
+      <div className="main-div" >
+        <h1 className="text-div">Hello Sir,<span className='greet' style={greetcolor}>{greet}</span> </h1>
+      </div>
+    
+    </>
+  );
+}
 export default App;
